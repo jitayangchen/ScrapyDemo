@@ -11,9 +11,9 @@ class TutorialPipeline(object):
 
     def process_item(self, item, spider):
         print 'XXXXXXXXXXXXX'
-        print item['title'][0].encode('utf-8')
+        print item['title'].encode('utf-8')
         print 'XXXXXXXXXXXXX'
-        self.save_file(item['title'][0].encode('utf-8'))
+        self.save_file(item['title'].encode('utf-8'))
         return item
 
     def save_file(self, title):
