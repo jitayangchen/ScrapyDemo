@@ -14,7 +14,7 @@ BOT_NAME = 'tutorial'
 SPIDER_MODULES = ['tutorial.spiders']
 NEWSPIDER_MODULE = 'tutorial.spiders'
 
-DUPEFILTER_CLASS = 'tutorial/remove_duplicate.url_filter'
+DUPEFILTER_CLASS = 'tutorial.remove_duplicate.url_filter'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

@@ -17,7 +17,6 @@ class DemoSpider(scrapy.Spider):
 
         # title = response.xpath('/html/head/title/text()').extract()
         for content in response.xpath('//*[@class="article block untagged mb15"]/div[2]/text()').extract():
-            print 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
             item = TutorialItem()
             item['title'] = content
             yield item
