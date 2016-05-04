@@ -18,7 +18,7 @@ class DemoSpider(scrapy.Spider):
         # title = response.xpath('/html/head/title/text()').extract()
         for content in response.xpath('//*[@class="article block untagged mb15"]/div[2]/text()').extract():
             item = TutorialItem()
-            item['title'] = content
+            item['content'] = content
             yield item
 
         for url in response.xpath('//*[@id="content-left"]/ul[@class="pagination"]/li/a/@href'):

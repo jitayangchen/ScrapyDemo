@@ -7,16 +7,16 @@
 
 
 class TutorialPipeline(object):
-    file = open('output.txt', 'w')
+    # file = open('output.txt', 'w')
 
     def process_item(self, item, spider):
-        print 'XXXXXXXXXXXXX'
-        print item['title'].encode('utf-8')
-        print 'XXXXXXXXXXXXX'
-        self.save_file(item['title'].encode('utf-8'))
+        # print 'XXXXXXXXXXXXX'
+        # print item['content'].encode('utf-8')
+        # print 'XXXXXXXXXXXXX'
+        # self.save_file(item['content'].encode('utf-8'))
         return item
 
-    def save_file(self, title):
+    def save_file(self, content):
 
-        self.file.write(title)
+        self.file.write(content)
         self.file.write('\n')
